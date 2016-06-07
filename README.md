@@ -41,4 +41,8 @@ You will be broken into teams and your goals is to reverse engineer the basic fu
 
 + Determine if the user is logged in with [getAuth()](https://www.firebase.com/docs/web/api/firebase/getauth.html)
 + Perform an action as soon as user logs in or out with the [onAuth event listener](https://www.firebase.com/docs/web/api/firebase/onauth.html)
+<<<<<<< HEAD
 + Allow user to use OAuth to log in via a social service with [authWithOAuthPopup()](https://www.firebase.com/docs/web/api/firebase/authwithoauthpopup.html)
+=======
++ Allow user to use OAuth to log in via a social service with [authWithOAuthPopup()](https://www.firebase.com/docs/web/api/firebase/authwithoauthpopup.html)
+
