@@ -1,6 +1,6 @@
 <body>
   <h1>New Pin</h1>
-  <form name="form" ng-submit="address.submit()" novalidate>
+  <form name="form" ng-submit="board.submit(board.boardid, board.imgUrl, board.title)" novalidate>
     <div class="form-group">
       <label for="boardId">Board</label>
       <input class="form-control" 
@@ -21,7 +21,7 @@
         name="imgUrl"
         placeholder="http://media.giphy.com/media/S0hxMGYFhEMzm/giphy-tumblr.gif"
         required
-        ng-model="board.imgUrl"
+        ng-model="board.url"
       />
     </div>
     <div class="form-group">
@@ -36,7 +36,7 @@
         ng-model="board.title"
       />
     </div>
-    <a href="/boards" class="btn btn-danger">Cancel</a>
+    <a href="#/boards" class="btn btn-danger">Cancel</a>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </body>

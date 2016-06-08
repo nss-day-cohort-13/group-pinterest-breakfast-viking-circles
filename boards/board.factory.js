@@ -96,8 +96,15 @@ angular.module('app')
       },
 
       create (board) {
-        boards.push(board);
+        boards.app.pins.push(board);
+        console.log("board.imgUrl = ", board.imgUrl);
+        console.log("boards = ", boards);
       },
+      // create (board.boardid, board.title, board.imgUrl) {
+      //   console.log("board.boardid = ", board.boardid);
+      //   console.log("board.title = ", board.title);
+        // console.log("board.imgUrl = ", board.imgUrl);
+        // console.log("boards = ", boards);
 
       update (index, board) {
         // id when passed by $routeParams is a string

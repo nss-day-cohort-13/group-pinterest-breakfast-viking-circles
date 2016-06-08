@@ -5,8 +5,7 @@ angular.module('app')
     const board = this;
 
     board.submit = () => {
-      console.log("submit fired");
-      BoardFactory.create(board.entry);
+      BoardFactory.create(board);
       $location.path('/boards/');
     };
   });
