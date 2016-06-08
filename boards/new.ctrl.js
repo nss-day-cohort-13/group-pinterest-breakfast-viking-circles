@@ -5,7 +5,14 @@ angular.module('app')
     const board = this;
 
     board.submit = () => {
-      BoardFactory.create(board);
-      $location.path('/boards/');
+    	// if this is a board creation
+    	if (board.url === "undefined") {
+    		BoardFactory.boardCreate(board)
+    		$location.path('/boards');
+    	// if this is a pin creation
+    	} else { 
+    		BoardFactory.pinCreate(board);
+    		$location.path('/boards/');
+    	}
     };
   });
