@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("auth.config");
-
 angular.module('app')
   .config(($routeProvider) => {
     $routeProvider

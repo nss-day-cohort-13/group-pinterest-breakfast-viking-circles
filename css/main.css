@@ -1,3 +1,11 @@
 h1 {
   color: tomato; 
 }
+
+.card {
+	border-radius: 12px;
+}
+
+#newBoard {
+	margin-bottom: 20px;
+}

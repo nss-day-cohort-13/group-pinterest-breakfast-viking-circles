@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("login.ctrl");
-
 angular.module('app')
   .controller('LoginCtrl', function ($location, AuthFactory) {
     const auth = this;
