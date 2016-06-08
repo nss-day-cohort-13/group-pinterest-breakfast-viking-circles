@@ -5,5 +5,7 @@ angular.module('app')
     $routeProvider
       .when('/', {
         templateUrl: '/landing/landing.html',
+        controller: 'LandingCtrl',
+        controllerAs: 'landing',
       })
   ));
