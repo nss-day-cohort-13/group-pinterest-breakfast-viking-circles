@@ -4,14 +4,12 @@ angular.module('app')
   .controller('BoardCtrl', function (BoardFactory) {
     const board = this;
 
-    // let list = BoardFactory.all();
-    // console.log("list = ", list);
-
-    BoardFactory.all().then(list =>
-      board.list = list
+    BoardFactory.all().then(function (list) {
+      board.list = list;
+      }
     );
-    
-    board.delete = (index) => {
+
+    board.delete = function (index) {
       BoardFactory.delete(index);
 
       board.list = [

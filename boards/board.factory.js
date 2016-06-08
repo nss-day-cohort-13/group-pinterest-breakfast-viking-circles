@@ -95,8 +95,12 @@ angular.module('app')
         return $timeout().then(() => boards[id]);
       },
 
-      create (board) {
-        boards.push(board);
+      pinCreate (board) {
+        boards.app.pins.push(board);
+      },
+
+      boardCreate (board) {
+        boards.app.boards.push(board);
       },
 
       update (index, board) {

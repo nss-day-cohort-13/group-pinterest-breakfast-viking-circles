@@ -1,11 +1,18 @@
 "use strict";
 
 angular.module('app')
-  .controller('NewAddressCtrl', function (AddressFactory, $location) {
-    const address = this;
+  .controller('NewBoardCtrl', function (BoardFactory, $location) {
+    const board = this;
 
-    address.submit = () => {
-      AddressFactory.create(address.person);
-      $location.path('/addresses');
+    board.submit = function () {
+      // if this is a board creation
+      if (board.url === undefined) {
+          BoardFactory.boardCreate(board);
+          $location.path('/boards');
+      // if this is a pin creation
+      } else { 
+          BoardFactory.pinCreate(board);
+          $location.path('/boards/');
+      }
     };
   });
