@@ -3,8 +3,20 @@
 angular.module('app')
   .factory('BoardFactory', ($timeout) => {
 
-    let boards = {
-      "app": 
+
+  return {
+    getUsers() {
+        $http.get('https://grouppinterestclone.firebaseio.com/.json')
+        .then(function(resp) {
+          console.log("resp", resp);
+          const userzAray = []
+          let userz = resp.data;
+            for ( let user in $scope.userz) {
+          $scope.userzArray.push($scope.userz[user]);
+          console.log(userz)
+        }
+    }{
+      "app":
       {
         "users": [
           {
@@ -83,7 +95,7 @@ angular.module('app')
     //     title: "Animals on wheels"
     //   }
     // ];
-     
+
     return {
       all () {
         return $timeout().then(() => boards);

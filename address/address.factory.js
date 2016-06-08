@@ -4,7 +4,7 @@ console.log("address.factory");
 
 angular.module('app')
   .factory('AddressFactory', ($timeout) => {
-    
+
     let list = [
        {
          name: "Zorm Kromax",
