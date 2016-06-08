@@ -5,6 +5,7 @@ angular.module('app')
     const board = this;
 
     board.submit = () => {
+    	console.log("board =", board);
     	// if this is a board creation
     	if (board.url === "undefined") {
     		BoardFactory.boardCreate(board)

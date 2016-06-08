@@ -5,7 +5,6 @@ angular.module('app')
     $routeProvider
       .when('/boards', {
         controller: 'BoardCtrl',
-        // controllerAs: 'address',
         controllerAs: 'board',
         templateUrl: 'boards/index.html',
       })
