@@ -5,7 +5,6 @@ angular.module('app')
     $routeProvider
       .when('/boards', {
         controller: 'BoardCtrl',
-        // controllerAs: 'address',
         controllerAs: 'board',
         templateUrl: 'boards/index.html',
       })
@@ -18,11 +17,6 @@ angular.module('app')
         controller: 'NewBoardCtrl',
         controllerAs: 'board',
         templateUrl: 'boards/newPin.html',
-      })
-      .when('/boards/:id/edit', {
-        controller: 'EditBoardCtrl',
-        controllerAs: 'board',
-        templateUrl: 'boards/form.html',
       })
     )
   );
