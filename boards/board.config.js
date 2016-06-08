@@ -18,10 +18,5 @@ angular.module('app')
         controllerAs: 'board',
         templateUrl: 'boards/newPin.html',
       })
-      // .when('/boards/:id/edit', {
-      //   controller: 'EditBoardCtrl',
-      //   controllerAs: 'board',
-      //   templateUrl: 'boards/form.html',
-      // })
     )
   );
