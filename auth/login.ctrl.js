@@ -7,5 +7,9 @@ angular.module('app')
     auth.login = function () {
       console.log("auth", auth.login);
       AuthFactory.userLogin(auth.user.email, auth.user.password)
+
+    auth.Register = function() {
+        $location.url('http://localhost:8080/#/register');
+   }
     };
   });
