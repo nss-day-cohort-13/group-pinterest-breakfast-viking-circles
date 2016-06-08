@@ -9,10 +9,15 @@ angular.module('app')
         controllerAs: 'board',
         templateUrl: 'boards/index.html',
       })
-      .when('/boards/new', {
+      .when('/boards/newBoard', {
         controller: 'NewBoardCtrl',
         controllerAs: 'board',
-        templateUrl: 'boards/form.html',
+        templateUrl: 'boards/newBoard.html',
+      })
+      .when('/boards/newPin', {
+        controller: 'NewBoardCtrl',
+        controllerAs: 'board',
+        templateUrl: 'boards/newPin.html',
       })
       .when('/boards/:id/edit', {
         controller: 'EditBoardCtrl',
