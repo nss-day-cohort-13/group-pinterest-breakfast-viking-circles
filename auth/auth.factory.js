@@ -1,7 +1,5 @@
 "use strict" ;
 
-console.log("auth.factory");
-
 angular.module('app')
   .factory('AuthFactory', ($timeout) => {
     const users = {

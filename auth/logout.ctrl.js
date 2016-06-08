@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("logout.ctrl");
-
 angular.module('app')
   .controller('LogoutCtrl', function (AuthFactory, $location) {
     AuthFactory.logout()

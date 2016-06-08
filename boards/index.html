@@ -1,0 +1,38 @@
+<body>
+  <h1>Pinterest Boards</h1>
+  <div>
+    <a href="#/boards/newBoard" class="btn btn-primary" id="newBoard">Add a new board</a>
+    <a href="#/boards/newPin" class="btn btn-primary" id="newBoard">Add a new pin</a>
+  </div>
+  <div class="card-columns"> <!-- This should include a filter when a user logs in to only show cards assoiciated with their uid -->
+    <div class="card card-block">
+      <blockquote class="card-blockquote">
+        <h3>Don't like what you see?</h3>
+        <button class="btn btn-danger" type="">Fuck Off</button>
+      </blockquote>
+    </div>
+    <div class="card" ng-repeat="pin in board.list.app.pins">
+<!--       {{board.boards}} -->
+      <img class="card-img-top" src={{pin.url}} alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Card title that wraps to a new line</h4>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p>{{pin.title}}</p>
+        <div id="boardTitle">
+          <p>Board group: {{pin.boardid}}</p>
+        </div>
+        <p>
+      </div>
+    </div>
+    <div class="card card-block">
+      <blockquote class="card-blockquote">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer>
+          <small class="text-muted">
+            Someone famous in <cite title="Source Title">Source Title</cite>
+          </small>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</body>
