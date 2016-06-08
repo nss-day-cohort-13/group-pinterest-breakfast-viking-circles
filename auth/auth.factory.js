@@ -1,31 +1,57 @@
-"use strict" ;
+"use strict";
 
 angular.module('app')
-  .factory('AuthFactory', ($timeout) => {
-    const users = {
-      'a@b.com': '123',
-      'b@c.com': '123'
-    };
 
-    let currentUser = null;
+.factory('AuthFactory', (function($http) {
 
-    return {
-      login (email, password) {
-        return $timeout().then(() => (
-          users[email] === password
-            ? Promise.resolve(currentUser = email)
-            : Promise.reject('Authentication Failed')
-        ));
-      },
+//   firebase.auth().onAuthStateChanged(function(user) {
+//   if (user) {
+//     alert("you have signed in successfully");// User is signed in.
+//   } else {
+//     alert("login failed")// No user is signed in.
+//   }
+// });
 
-      logout () {
-        return $timeout().then(() => (
-          currentUser = null
-        ));
-      },
+  return {
+    getUsers() {
+        $http.get('https://grouppinterestclone.firebaseio.com/users/.json')
+        .then(function(resp) {
+          console.log("resp", resp);
+          // const userzAray = []
+          let userz = resp.data;
+          //   for ( let user in $scope.userz) {
+          // $scope.userzArray.push($scope.userz[user]);
+          console.log(userz)
+        }
+      )
+    },
 
-      getUser () {
-        return currentUser;
-      }
-    };
-  });
+    userCreate(email, password) {
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorMessage)
+        // ...
+      }); //create user
+    },
+
+    userLogin(email, password) {
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorMessage );
+        // ...
+      }); //sign in
+    },
+
+    userLogout() {
+      firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+      }, function(error) {
+        // An error happened. //logout
+      })
+    },
+  }
+}))

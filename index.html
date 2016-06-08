@@ -13,6 +13,17 @@
 	      <div ng-view></div>
 	    </div>
 	  </div>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyADv0f2e_MYoVsKcU3DZQ8S6lAeVEk6fwI",
+    authDomain: "grouppinterestclone.firebaseapp.com",
+    databaseURL: "https://grouppinterestclone.firebaseio.com",
+    storageBucket: "grouppinterestclone.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
 		<script src="/node_modules/jquery/dist/jquery.min.js"></script>
 		<script src="/bower_components/angular/angular.min.js"></script>
 		<script src="/bower_components/angular-route/angular-route.min.js"></script>

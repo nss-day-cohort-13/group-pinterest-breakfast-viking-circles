@@ -4,13 +4,20 @@ angular.module('app')
   .config(($routeProvider) => {
     $routeProvider
       .when('/login', {
-        controller: 'LoginCtrl',
+        controller: 'loginCtrl',
         controllerAs: 'auth',
         templateUrl: '/auth/login.html'
       })
+      .when('/register', {
+        controller: 'registerCtrl',
+        controllerAs: 'auth',
+        templateUrl: '/auth/register.html'
+      })
       .when('/logout', {
-        controller: 'LogoutCtrl',
+        controller: 'logoutCtrl',
         controllerAs: 'auth',
         template: ''
-      });
-  });
+      })
+    })
+
+
