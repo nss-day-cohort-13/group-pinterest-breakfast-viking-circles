@@ -1,81 +1,42 @@
-<h1>New Pin</h1>
-<form name="form" ng-submit="address.submit()" novalidate>
-  <div
-    class="form-group"
-    ng-class="{
-      'has-error': form.name.$dirty && form.name.$invalid,
-      'has-success': form.name.$dirty && form.name.$valid
-    }"
-  >
-    <label for="name">Name</label>
-    <input
-      class="form-control"
-      id="name"
-      name="name"
-      type="text"
-      placeholder="Joe"
-      required
-      ng-model="address.person.name"
-    />
-  </div>
-  <div
-    class="form-group"
-    ng-class="{
-      'has-error': form.phone.$dirty && form.phone.$invalid,
-      'has-success': form.phone.$dirty && form.phone.$valid
-    }"
-  >
-    <label for="phone">Phone</label>
-    <input
-      class="form-control"
-      id="phone"
-      type="tel"
-      name="phone"
-      placeholder="234-567-8900"
-      required
-      ng-model="address.person.phone"
-    />
-  </div>
-  <div
-    class="form-group"
-    ng-class="{
-      'has-error': form.email.$dirty && form.email.$invalid,
-      'has-success': form.email.$dirty && form.email.$valid
-    }"
-  >
-    <label for="email">Email</label>
-    <input
-      class="form-control"
-      id="email"
-      type="email"
-      name="email"
-      placeholder="joe@example.com"
-      required
-      ng-model="address.person.email"
-    />
-  </div>
-  <div
-    class="form-group"
-    ng-class="{
-      'has-error': form.twitter.$dirty && form.twitter.$invalid,
-      'has-success': form.twitter.$dirty && form.twitter.$valid
-    }"
-  >
-    <label for="twitter">Twitter</label>
-    <input
-      class="form-control"
-      id="twitter"
-      name="twitter"
-      type="text"
-      placeholder="joe"
-      required
-      ng-model="address.person.twitter"
-    />
-  </div>
-  <a href="#/addresses" class="btn btn-danger">Cancel</a>
-  <button
-    type="submit"
-    class="btn btn-primary"
-    ng-disabled="form.$invalid"
-  >Submit</button>
-</form>
+<body>
+  <h1>New Pin</h1>
+  <form name="form" ng-submit="address.submit()" novalidate>
+    <div class="form-group">
+      <label for="boardId">Board</label>
+      <input class="form-control" 
+        id="boardId" 
+        name="boardId" 
+        type="text" 
+        placeholder="Stupid animals"
+        required
+        ng-model="board.boardid"
+      />
+    </div>
+    <div class="form-group">
+      <label for="imgUrl">Image Url</label>
+      <input
+        class="form-control"
+        id="imgUrl"
+        type="text"
+        name="imgUrl"
+        placeholder="http://media.giphy.com/media/S0hxMGYFhEMzm/giphy-tumblr.gif"
+        required
+        ng-model="board.imgUrl"
+      />
+    </div>
+    <div class="form-group">
+      <label for="pinTitle">Title</label>
+      <input
+        class="form-control"
+        id="pinTitle"
+        type="text"
+        name="pinTitle"
+        placeholder="Haha, stupid test"
+        required
+        ng-model="board.title"
+      />
+    </div>
+    <a href="/boards" class="btn btn-danger">Cancel</a>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</body>

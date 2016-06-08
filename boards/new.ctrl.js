@@ -1,11 +1,12 @@
 "use strict";
 
 angular.module('app')
-  .controller('NewAddressCtrl', function (AddressFactory, $location) {
-    const address = this;
+  .controller('NewBoardCtrl', function (BoardFactory, $location) {
+    const board = this;
 
-    address.submit = () => {
-      AddressFactory.create(address.person);
-      $location.path('/addresses');
+    board.submit = () => {
+      console.log("submit fired");
+      BoardFactory.create(board.entry);
+      $location.path('/boards/');
     };
   });
