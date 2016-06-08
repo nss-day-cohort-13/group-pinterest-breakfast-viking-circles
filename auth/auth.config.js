@@ -8,10 +8,10 @@ angular.module('app')
         controllerAs: 'auth',
         templateUrl: '/auth/login.html'
       })
-      .when('/login', {
+      .when('/register', {
         controller: 'registerCtrl',
         controllerAs: 'auth',
-        templateUrl: '/auth/login.html'
+        templateUrl: '/auth/register.html'
       })
       .when('/logout', {
         controller: 'logoutCtrl',

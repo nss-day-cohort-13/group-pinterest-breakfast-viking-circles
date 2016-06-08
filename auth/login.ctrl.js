@@ -4,9 +4,8 @@ angular.module('app')
   .controller('loginCtrl', function ($location, AuthFactory) {
     const auth = this;
 
-    auth.userLogin = function () {
+    auth.login = function () {
+      console.log("auth", auth.login);
       AuthFactory.userLogin(auth.user.email, auth.user.password)
-        .then(() => $location.path('/boards'))
-        .catch(() => alert('Login Failed'));
     };
   });
