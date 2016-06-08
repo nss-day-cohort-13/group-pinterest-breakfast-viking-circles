@@ -1,12 +1,12 @@
 "use strict";
 
 angular.module('app')
-  .controller('LoginCtrl', function ($location, AuthFactory) {
+  .controller('loginCtrl', function ($location, AuthFactory) {
     const auth = this;
 
-    auth.login = function () {
-      AuthFactory.login(auth.user.email, auth.user.password)
-        .then(() => $location.path('/addresses'))
+    auth.userLogin = function () {
+      AuthFactory.userLogin(auth.user.email, auth.user.password)
+        .then(() => $location.path('/boards'))
         .catch(() => alert('Login Failed'));
     };
   });

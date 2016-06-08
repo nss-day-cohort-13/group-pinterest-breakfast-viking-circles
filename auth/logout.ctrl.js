@@ -1,8 +1,8 @@
-"use strict";
+// "use strict";
 
 angular.module('app')
-  .controller('LogoutCtrl', function (AuthFactory, $location) {
-    AuthFactory.logout()
+  .controller('logoutCtrl', function (AuthFactory, $location) {
+    AuthFactory.userLogout()
       .then(() => $location.path('/login'))
       .catch(() => $location.path('/login'));
   });
