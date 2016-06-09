@@ -8,7 +8,7 @@ angular.module('app')
 //   if (user) {
 //     alert("you have signed in successfully");// User is signed in.
 //   } else {
-//     alert("login failed")// No user is signed in.
+//     alert("login failed");// No user is signed in.
 //   }
 // });
 
@@ -21,7 +21,7 @@ angular.module('app')
           let userz = resp.data;
           //   for ( let user in $scope.userz) {
           // $scope.userzArray.push($scope.userz[user]);
-          console.log(userz)
+          console.log(userz);
         }
       )
     },
@@ -31,7 +31,7 @@ angular.module('app')
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        console.log(errorMessage)
+        console.log(errorMessage);
         // ...
       }); //create user
     },
@@ -51,7 +51,7 @@ angular.module('app')
         // Sign-out successful.
       }, function(error) {
         // An error happened. //logout
-      })
+      });
     },
   }
 }))
