@@ -4,25 +4,32 @@
   ===================================
   -->
 <body ng-controller="">
-	<h1>Welcome (Back?)</h1>
-  <nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Pinterest</a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-	    </ul>
-	  </div>
-	</nav>
+	    <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+      <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Pinterest by BVC</a>
+      <div id="navbar">
+        <nav class="nav navbar-nav pull-xs-left">
+          <a class="nav-item nav-link" href="#/boards">Boards</a>
+        </nav>
+        <form class="pull-xs-right form-inline">
+          <input type="text" class="form-control" placeholder="username">
+          <input type="text" class="form-control" placeholder="password">
+          <<button type="submit" class="btn btn-default">Login</button>
+        </form>
+      </div>
+    </nav>
 
   <!--
   ===================================
   CARDS
   ===================================
   -->
-	<div class="card-columns">
+	<div class="card-columns card-lower">
 	  <div class="card card-block" ng-repeat="card in landing.list">
 	    <img class="card-img-top" ng-src="{{card.src}}" alt="Card image cap">
 	    <div class="card-block">
