@@ -1,5 +1,5 @@
 h1 {
-  color: tomato; 
+  color: tomato;
 }
 
 .card {
@@ -8,4 +8,8 @@ h1 {
 
 #newBoard {
 	margin-bottom: 20px;
+}
+
+.card-lower {
+	margin-top: 100px !important;
 }

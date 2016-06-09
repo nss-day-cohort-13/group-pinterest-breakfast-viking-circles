@@ -15,8 +15,9 @@ angular.module('app')
           $scope.userzArray.push($scope.userz[user]);
           console.log(userz)
         }
-    }{
-      "app":
+    })
+    {
+      "app": //this colon is highlight as bad
       {
         "users": [
           {
